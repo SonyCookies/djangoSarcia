@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flood Warning - City Center</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body class="bg-gray-100">
+  <!-- Navbar -->
+  <nav class="bg-blue-900 p-4">
+    <div class="container mx-auto">
+      <a href="{% url 'home' %}" class="text-white text-2xl font-semibold">Flood Monitoring</a>
+    </div>
+  </nav>
+
+  <!-- Alert Details Section -->
+  <section class="py-12">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Flood Warning - City Center</h2>
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-2xl font-semibold text-red-600">Issued 2 hours ago</h3>
+        <p class="mt-4 text-gray-700">
+          Water levels are rising rapidly in the City Center area. Residents are advised to move to higher ground immediately.
+        </p>
+        <p class="mt-4 text-gray-700">
+          Emergency services are on high alert, and evacuation points have been set up at the following locations:
+          <ul class="list-disc ml-6 mt-2">
+            <li>Main Street Community Center</li>
+            <li>Central Park Shelter</li>
+            <li>Westside High School Gym</li>
+          </ul>
+        </p>
+        <a href="{% url 'home' %}#alerts" class="mt-8 inline-block bg-blue-600 text-white py-3 px-6 rounded-lg shadow hover:bg-blue-500">Back to Alerts</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
